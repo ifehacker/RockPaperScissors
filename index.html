@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Practice</title>
+<meta charset="UTF-8"/>
+
+</head>
+<body>
+
+<p> </p>
+<button onclick="alert('Hello World')">Click Me</button>
+
+
+
+ <section class="preview">
+
+
+
+</section>
+
+
+<script>
+let sect = document.querySelector("section");
+let para = document.createElement("p");
+let paraNew = document.createElement("p");
+
+let rps = ["rock", "paper", "scissors"];
+
+function computerPlay(){
+  let ranNum = Math.floor(Math.random() * rps.length);
+  let computerChoice = rps[ranNum];
+  para.textContent =  "Hi the computer chose" + " " + computerChoice;
+}
+computerPlay();
+
+let playerInput = prompt("choose Rock, Paper or scissors")
+let playerChoice = playerInput.toLowerCase()
+let computerSelection = computerPlay();
+let response;
+
+if ( computerSelection  == playerChoice ) {
+    response = "Sorry Rock beats paper "
+} else {
+    response = "You Win"
+}
+console.log(response)
+
+sect.appendChild(para)
+
+</script>
+
+</body>
+
+</html>
